@@ -30,6 +30,13 @@ $ brewservice list
 
 List available services
 
+### Status
+```
+$ brewservice status
+```
+
+Show on/off status of all available services
+
 ### Start
 ``` 
 $ brewservice start <service>

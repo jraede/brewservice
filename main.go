@@ -102,6 +102,20 @@ func main() {
 				}
 			},
 		},
+		{
+			Name:  "status",
+			Usage: "View status of all services",
+			Action: func(c *cli.Context) {
+				statuses, err := getStatus()
+				if err != nil {
+					fatal(err)
+				}
+
+				for service, status := range statuses {
+					fmt.Printf("* %s: %s\n", service, status)
+				}
+			},
+		},
 	}
 
 	app.Run(os.Args)
