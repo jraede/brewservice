@@ -4,8 +4,19 @@ brewservice - easily start and stop services installed by homebrew
 If you have a whole bunch of services, it's probably not a good idea to have them all start automatically when you boot your machine. This tool parses your `/usr/local/Cellar/` directory to find all of the `homebrew.*.*.plist` files and lets you turn them on and off without typing out the tedious `launchctl` commands every time.
 
 ## Installation
+
+If you have go...
+
 ```
 $ go get github.com/jraede/brewservice
+```
+
+Otherwise you can download the compiled binary...
+
+```
+$ curl -O https://raw.githubusercontent.com/jraede/brewservice/master/brewservice
+$ sudo mv brewservice /usr/local/bin/brewservice
+$ sudo chmod +x /usr/local/bin/brewservice
 ```
 
 ## Commands
